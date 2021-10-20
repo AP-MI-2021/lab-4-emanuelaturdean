@@ -53,6 +53,10 @@ if __name__ == '__main__':
                     print(elem, "apartine intervalului dat")
         if numar == 4:
             for elem in listaCitita:
+                #pentru fiecare element din lista,vom realiza partea intreaga,
+                #apoi il transformam intr-un string,cautam pozitia punctului,pozitie dupa care gasim partea fractionara
+                #si o transformam si pe ea intr-un intreg,tocmai pentru a o putea verifica daca are ca divizor
+                #partea intreaga a nr. luat din lista noastra
                 parteintreagaelem=int(elem)
                 stringelem=str(elem)
                 pozitiePunct=stringelem.find('.')
