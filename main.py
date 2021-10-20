@@ -8,7 +8,8 @@ def citireLista():
     return lista
 def citireInterval(i,a,b):
     #aceasta functie verifica daca un element dat i apartine sau nu intervalului deschis citit de la tastatura(capetele fiind considerate
-    #elementele a si b citite de la tastatura apeland functia 3 a meniului)
+    #elementele a si b citite de la tastatura apeland functia 3 a meniului),returnand True sau False,dupa caz,daca
+    #elementul i dat apartine sau nu intervalului
     if i > a and i < b:
         return True
     else:
@@ -27,6 +28,7 @@ def printMenu():
     print('2.Lista numere intregi')
     print('3. verificare aparteneta la un interval')
     print('4.Afisarea tuturor numerelor a caror parte intreaga e divizor al partii fractionare')
+    print('5.Afisarea listei obtinute din lista initiala inlocuita cu siruri de caractere sugestive numerelor citite')
 listaCitita= []
 if __name__ == '__main__':
     printMenu()
@@ -43,6 +45,7 @@ if __name__ == '__main__':
                     listaNumereIntregi.append(int(element))
             print(listaNumereIntregi)
         if numar == 3:
+            #citim de la tastatura cele doua capete ale intervalului deschis
             capatstang = int(input("scrie capatul stang al intervalului:"))
             capatdrept = int(input("scrie capatul drept al intervalului:"))
             for elem in listaCitita:
@@ -57,6 +60,7 @@ if __name__ == '__main__':
                 partefractionaraelem=int(partefractionarastring)
                 if eDivizibil(partefractionaraelem,parteintreagaelem):
                     print(elem, "are partea intreaga divizor al partii sale fractionare")
+
         printMenu()
         numar = int(input("Insert option:"))
 
